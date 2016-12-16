@@ -1,36 +1,24 @@
-{{! ---
-component: pagination
-============================================
-
-Requirements:
-
-Options:
-- pagContext {String} [default] - Just pass a string
-- pagClasses {String} - Modifier classes
-
-- pagButtons {Object} - Object with multiple elements
-- pagButtons.pagDescription {String} - Description for buttons
-- pagButtons.previous {String} - Description for previous button
-- pagButtons.next {String} - Description for next button
-
-- pagCurrent {String} - Description for current element
-- pagMax {Number} - Last number in pagination
-
-Important Notes:
-
---- }}
-
-<div class="c-pagination{{#if pagContext}}--{{pagContext}}{{else}}--default{{/if}}{{#if pagClasses}} {{pagClasses}}{{/if}}" data-css="c-pagination">
+---
+type: component
+contextData: "pagination-bp"
+layout: "lyt-docs"
+publish: true
+scssFiles:
+- _c-pagination.scss
+---
+<div class="c-pagination{{#if settings.pagContextClass}}--{{settings.pagContextClass}}{{else}}--default{{/if}}{{#if
+		settings.pagClasses}} {{settings.pagClasses}}{{/if}}" data-css="c-pagination">
 	<ul class="pagination__list">
-		{{#if pagButtons}}
+		{{#if content.pagButtons}}
 			<li class="pagination__list-item is-disabled">
-				<strong class="pagination__list-element is-previous"><span class="is-hidden">{{pagButtons.description}}</span>{{pagButtons.previous}}
+				<strong class="pagination__list-element is-previous"><span
+						class="is-hidden">{{content.pagButtons.description}}</span>{{content.pagButtons.previous}}
 				</strong>
 			</li>
 		{{/if}}
 
 		<li class="pagination__list-item is-active">
-			<span class="is-hidden">{{pagCurrent}}</span> <strong class="pagination__list-element">1</strong>
+			<span class="is-hidden">{{content.pagCurrent}}</span> <strong class="pagination__list-element">1</strong>
 		</li>
 		<li class="pagination__list-item">
 			<a class="pagination__list-element" href="#">2</a>
@@ -42,12 +30,12 @@ Important Notes:
 			<a class="pagination__list-element" href="#">...</a>
 		</li>
 		<li class="pagination__list-item">
-			<a class="pagination__list-element" href="#">{{pagMax}}</a>
+			<a class="pagination__list-element" href="#">{{content.pagMax}}</a>
 		</li>
-		{{#if pagButtons}}
+		{{#if content.pagButtons}}
 			<li class="pagination__list-item">
 				<a class="pagination__list-element is-next" href="#" title="One Page Forward">
-					<span class="is-hidden">{{pagButtons.description}}</span>{{pagButtons.next}}
+					<span class="is-hidden">{{content.pagButtons.description}}</span>{{content.pagButtons.next}}
 				</a>
 			</li>
 		{{/if}}

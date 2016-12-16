@@ -3,14 +3,25 @@ COMPONENT: PAGINATION
 =================================================== */
 
 /* ---------------------------------------------------
+Global Variables
+--------------------------------------------------- */
+$pagination-primary-color: #333 !default;
+$pagination-secondary-color: #ccc !default;
+$pagination-bg-color: #fff !default;
+$pagination-ease-method: ease !default;
+
+/* ---------------------------------------------------
 Global Styles
 --------------------------------------------------- */
 [data-css="c-pagination"] {
+	
 	.pagination__list {
 		list-style: none;
 	}
+	
 	.pagination__list-item {
 	}
+	
 	.pagination__list-element {
 	}
 
@@ -19,25 +30,24 @@ Global Styles
 	----------------------- */
 	.is-previous {
 	}
+	
 	.is-next {
 	}
+	
 	.is-hidden {
 	}
+	
 	.is-active {
 	}
+	
 	.is-disabled {
 	}
 }
 
 /* ---------------------------------------------------
 Context: Default
-- REQUIREMENTS: veams-sass
 --------------------------------------------------- */
 .c-pagination--default {
-	$pagination-blue: #333;
-	$pagination-light: #ccc;
-	$pagination-white: #fff;
-	$transition-ease-method: ease;
 
 	.is-hidden {
 		display: none;
@@ -52,39 +62,39 @@ Context: Default
 		float: left;
 		margin-right: 5px;
 		width: 50px;
-		background-color: $pagination-white;
+		background-color: $pagination-bg-color;
 		text-align: center;
-		border: 1px solid rgba($pagination-blue, 0.3);
+		border: 1px solid rgba($pagination-primary-color, 0.3);
 
 		&:hover {
-			border-color: $pagination-light;
+			border-color: $pagination-secondary-color;
 		}
 
 		&.is-active {
-			border: 1px solid $pagination-light;
-			box-shadow: inset 0 0 0 4px $pagination-light;
+			border: 1px solid $pagination-secondary-color;
+			box-shadow: inset 0 0 0 4px $pagination-secondary-color;
 		}
 
 		.is-hidden {
-			@extend %hide-text;
+			@extend %hidden-text;
 
 			display: block;
 		}
 	}
 
 	.pagination__list-element {
-		color: $pagination-blue;
+		color: $pagination-primary-color;
 		display: block;
 		font-size: 1.9rem;
 		font-weight: 400;
 		line-height: 2;
 		padding: 14px 0;
 		text-decoration: none;
-		transition: color 0.2s $transition-ease-method;
+		transition: color 0.2s $pagination-ease-method;
 
 		&.is-active {
-			color: $pagination-light;
-			transition: color 0.2s $transition-ease-method;
+			color: $pagination-secondary-color;
+			transition: color 0.2s $pagination-ease-method;
 		}
 
 		&.is-previous,
@@ -94,22 +104,24 @@ Context: Default
 			height: 66px;
 
 			&::after {
-				@extend %pseudo;
 				@include centering(hv, relative);
+				@extend %pseudo;
 
-				color: $pagination-blue;
+				color: $pagination-primary-color;
 				font-size: 1.8rem;
 				opacity: 1;
 			}
 		}
 
 		&.is-previous {
+			
 			&::after {
 				content: '<'
 			}
 		}
 
 		&.is-next {
+			
 			&::after {
 				content: '>'
 			}
