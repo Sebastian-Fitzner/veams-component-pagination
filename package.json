@@ -1,0 +1,18 @@
+{
+	"name": "veams-component-pagination",
+	"version": "4.0.0",
+	"description": "Simple pagination component.",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/Veams/veams-component-pagination.git"
+	},
+	"keywords": [
+		"veams"
+	],
+	"author": "Sebastian Fitzner",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Veams/veams-component-pagination/issues"
+	},
+	"homepage": "https://github.com/Veams/veams-component-pagination#readme"
+}
