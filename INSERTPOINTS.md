@@ -1,3 +1,5 @@
+## Usage
+
 ### Include: Page
 
 ``` hbs
@@ -6,12 +8,4 @@
 	{{> c-pagination}}
 {{/with}}
 {{! @INSERT :: END }}
-```
-
-### Include: SCSS
-
-``` scss
-// @INSERT :: START @tag: scss-self-contained-import //
-@import "../components/pagination/scss/_c-pagination";
-// @INSERT :: END //
 ```

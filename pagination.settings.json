@@ -1,0 +1,9 @@
+{
+	"type": "component",
+	"displayName": "c-pagination",
+	"contextData": "pagination-bp",
+	"layout": "lyt-docs",
+	"scssFiles": [
+		"_c-pagination.scss"
+	]
+}
