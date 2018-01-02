@@ -5,7 +5,7 @@
 ``` hbs
 {{! @INSERT :: START @id: pagination, @tag: component-partial }}
 {{#with pagination-bp.simple}}
-	{{> c-pagination}}
+	{{> pagination}}
 {{/with}}
 {{! @INSERT :: END }}
 ```
