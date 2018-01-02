@@ -28,7 +28,7 @@ Simple pagination component.
 
 ## Fields
 
-### `c-pagination.hbs`
+### `pagination.hbs`
 
 #### Settings
 - settings.pagContextClass {`String`} [default] - _Context class of component._
