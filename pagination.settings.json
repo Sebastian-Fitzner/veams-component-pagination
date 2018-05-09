@@ -1,8 +1,0 @@
-{
-	"type": "component",
-	"contextData": "pagination-bp",
-	"layout": "lyt-docs",
-	"scssFiles": [
-		"styles/_pagination.scss"
-	]
-}

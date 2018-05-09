@@ -14,14 +14,15 @@ $pagination-ease-method: ease !default;
 Global Styles
 --------------------------------------------------- */
 [data-css="c-pagination"] {
-	
+	display: inline-block;
+
 	.pagination__list {
 		list-style: none;
 	}
-	
+
 	.pagination__list-item {
 	}
-	
+
 	.pagination__list-element {
 	}
 
@@ -30,16 +31,16 @@ Global Styles
 	----------------------- */
 	.is-previous {
 	}
-	
+
 	.is-next {
 	}
-	
+
 	.is-hidden {
 	}
-	
+
 	.is-active {
 	}
-	
+
 	.is-disabled {
 	}
 }
@@ -48,7 +49,6 @@ Global Styles
 Context: Default
 --------------------------------------------------- */
 .c-pagination--default {
-
 	.is-hidden {
 		display: none;
 	}
@@ -64,7 +64,7 @@ Context: Default
 		width: 50px;
 		background-color: $pagination-bg-color;
 		text-align: center;
-		border: 1px solid rgba($pagination-primary-color, 0.3);
+		border: 1px solid rgba($pagination-primary-color, .3);
 
 		&:hover {
 			border-color: $pagination-secondary-color;
@@ -90,18 +90,18 @@ Context: Default
 		line-height: 2;
 		padding: 14px 0;
 		text-decoration: none;
-		transition: color 0.2s $pagination-ease-method;
+		transition: color .2s $pagination-ease-method;
 
 		&.is-active {
 			color: $pagination-secondary-color;
-			transition: color 0.2s $pagination-ease-method;
+			transition: color .2s $pagination-ease-method;
 		}
 
 		&.is-previous,
 		&.is-next {
 			@include hidden-text;
 
-			height: 66px;
+			height: 38px;
 
 			&::after {
 				@include centering(hv, relative);
@@ -114,16 +114,14 @@ Context: Default
 		}
 
 		&.is-previous {
-			
 			&::after {
-				content: '<'
+				content: '<';
 			}
 		}
 
 		&.is-next {
-			
 			&::after {
-				content: '>'
+				content: '>';
 			}
 		}
 	}

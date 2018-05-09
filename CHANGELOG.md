@@ -1,3 +1,13 @@
+## Namespaced Versions
+
+### v1.0.0
+
+- Migrate to use 
+
+	**@veams/core**, **@veams/component**
+
+------------------
+
 ### v5.1.1
 - Update readme
 

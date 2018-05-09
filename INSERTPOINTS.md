@@ -4,7 +4,7 @@
 
 ``` hbs
 {{! @INSERT :: START @id: pagination, @tag: component-partial }}
-{{#with pagination-bp.simple}}
+{{#with pagination.variations.simple}}
 	{{> pagination}}
 {{/with}}
 {{! @INSERT :: END }}

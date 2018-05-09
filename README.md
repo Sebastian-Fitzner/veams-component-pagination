@@ -1,5 +1,5 @@
 <p align="right">
-<a href="https://badge.fury.io/js/veams-component-pagination"><img src="https://badge.fury.io/js/veams-component-pagination.svg" alt="npm version" height="18"></a>
+<a href="https://badge.fury.io/js/@veams/component-pagination"><img src="https://badge.fury.io/js/@veams/component-pagination.svg" alt="npm version" height="18"></a>
     <a href="https://gitter.im/Sebastian-Fitzner/Veams?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/Sebastian-Fitzner/Veams.svg" alt="Gitter Chat" /></a>
 </p>
 
@@ -13,8 +13,7 @@ Simple pagination component.
 
 ## Requirements
 
-### Sass
-`Veams-Sass >= v2.0.0` - Basic Sass library.
+- [@veams/core](https://github.com/Veams/core) - Veams Core Framework.
 
 -----------
 
@@ -22,7 +21,12 @@ Simple pagination component.
 
 ### Installation with Veams
 
-`veams install vc pagination`
+``` bash
+veams install component pagination
+```
+``` bash
+veams -i c pagination
+```
 
 -----------
 
@@ -31,13 +35,19 @@ Simple pagination component.
 ### `pagination.hbs`
 
 #### Settings
-- settings.pagContextClass {`String`} [default] - _Context class of component._
-- settings.pagClasses {`String`} - _Modifier classes for component._
+
+| Parameter | Type | Value | Description |
+|:--- |:---:|:---: |:--- |
+| settings.pagContextClass | String | `default` | Context class of component. |
+| settings.pagClasses | String | | Modifier classes for component. |
 
 #### Content
-- content.pagButtons {`Object`} - _Object with multiple elements._
-- content.pagButtons.pagDescription {`String`} - _Description for buttons._
-- content.pagButtons.previous {`String`} - _Description for previous button._
-- content.pagButtons.next {`String`} - _Description for next button._
-- content.pagCurrent {`String`} - _Description for current element._
-- content.pagMax {`Number`} - _Last number in pagination._
+
+| Parameter | Type | Description |
+|:--- |:---:|:--- |
+| content.pagButtons | Object | Object with multiple elements. |
+| content.pagButtons.pagDescription | String | Description for buttons. |
+| content.pagButtons.previous | String | Description for previous button. |
+| content.pagButtons.next | String | Description for next button. |
+| content.pagCurrent | String | Description for current element. |
+| content.pagMax | Number | Last number in pagination. |

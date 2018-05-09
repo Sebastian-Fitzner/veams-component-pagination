@@ -2,8 +2,7 @@
 	"variations": {
 		"simple": {
 			"docs": {
-				"variationName": "Pagination (Simple)",
-				"sectionCenter": true
+				"variationName": "Pagination (Simple)"
 			},
 			"settings": {
 				"pagContextClass": "default",
